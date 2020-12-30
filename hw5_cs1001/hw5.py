@@ -323,13 +323,9 @@ def power_new(a, b):
     reverse_b_bin = b_bin[::-1]
 
     for bit in reverse_b_bin:
-        pass
-#    _____________________________________
-#
-#    _____________________________________
-#
-#   _____________________________________
-
+        if bit == '1':
+            result *= a
+        a *= a
     return result
 
 
@@ -347,18 +343,16 @@ def power_with_base(a, b, base=2):
 
         x = 1
 
-#        residual = __________________________
+        residual = b % base
 
-#        for i in range(residual):
-#            x *= a
+        for i in range(residual):
+            x *= a
 
-#        _____________________________________
+        result *= x
+        for i in range(base - residual - 1):
+            x *= a
 
-#        for i in range(__________________):
-#            x *= a
-
-#        _____________________________________
-
+        a *= x
         b = b // base
 
     return result
@@ -369,7 +363,15 @@ def power_with_base(a, b, base=2):
 ############
 # a
 def prefix_suffix_overlap(lst, k):
-    pass  # replace this with your code
+    prefix_pairs = []
+    for idx1, s1 in enumerate(lst):
+        for idx2, s2 in enumerate(lst):
+            if idx1 == idx2:
+                continue
+            if s1[:k] == s2[-k:]:
+                prefix_pairs.append((idx1, idx2))
+    return prefix_pairs
+
 
 
 # c
@@ -396,7 +398,9 @@ class Dict:
 
     def find(self, key):
         """ returns ALL values of key as a list, empty list if none """
-        pass  # replace this with your code
+        i = self.hash_mod(key)
+        hash_lst = self.table[i]
+        return [obj[1] for obj in hash_lst if obj[0] == key]
 
 
 #########################################

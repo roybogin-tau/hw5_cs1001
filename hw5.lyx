@@ -416,5 +416,747 @@ End
  נשים לב שבהכרח אחד מהם יקרה ולכן האלגוריתם תמיד יחזיר ערך.
 \end_layout
 
+\begin_layout Section*
+
+\bar under
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+:
+\end_layout
+
+\begin_layout Subsection*
+א.
+\end_layout
+
+\begin_layout Standard
+נסמן 
+\begin_inset Formula $a=x+by$
+\end_inset
+
+ )ולכן 
+\begin_inset Formula $x=a\mod b$
+\end_inset
+
+( עבור 
+\begin_inset Formula $x,y\in\mathbb{N}$
+\end_inset
+
+ כלשהם.
+ נראה כי
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a^{c}\mod b=\left(a+by\right)^{c}\mod b=\sum_{i=0}^{c}\frac{c!}{i!\left(c-i\right)!}x^{i}\left(by\right)^{c-i}\mod b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נשים לב שאם 
+\begin_inset Formula $i\neq c$
+\end_inset
+
+ אז 
+\begin_inset Formula $\frac{c!}{i!\left(c-i\right)!}x^{i}\left(by\right)^{c-i}$
+\end_inset
+
+ מתחלק ב-
+\begin_inset Formula $b$
+\end_inset
+
+ )
+\begin_inset Formula $b$
+\end_inset
+
+ מועלה בחזקה חיובית וידוע שלכל 
+\begin_inset Formula $i<c$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\frac{c!}{i!\left(c-i\right)!}$
+\end_inset
+
+ מספר שלם ולכן לא מתקזז עם 
+\begin_inset Formula $b$
+\end_inset
+
+(.
+ מכאן נובע ש-
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a^{c}\mod b=0+\frac{c!}{c!\left(c-c\right)!}x^{c}\left(by\right)^{c-c}\mod b=x^{c}\mod b=\left(a\mod b\right)^{c}\mod b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+ב.
+\end_layout
+
+\begin_layout Standard
+על פי הסעיף הקודם, נשים לב שמתקיים
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \left(g^{b}\mod p\right)^{a'}\mod p=\left(g^{b}\right)^{a'}\mod p=\left(g^{a'}\right)^{b}\mod p=\\
+ & =\left(g^{a'}\mod p\right)^{b}\mod p=\left(g^{a}\mod p\right)^{b}\mod p=g^{ab}\mod p
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+וכך ניתן לחשב את הדרוש.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\numeric off
+:
+\end_layout
+
+\begin_layout Subsection*
+א.
+\end_layout
+
+\begin_layout Standard
+נשים לב שסיבוכיות זמן הריצה של הכפלת שני מספרים באורך היא 
+\begin_inset Formula $x$
+\end_inset
+
+ ו-
+\begin_inset Formula $y$
+\end_inset
+
+ ביטים בהתאמה היא 
+\begin_inset Formula $O\left(xy\right)$
+\end_inset
+
+.
+ נראה כי כל ביט במספר הראשון מוכפל בכל ביט במספר השני ולאחר מכן מתבצעות
+ במקרה הגרוע ביותר 
+\begin_inset Formula $O\left(xy\right)$
+\end_inset
+
+ סכימות של שני ביטים.
+ מכאן נובע שהסיבוכיות הכוללת של הפעולה היא 
+\begin_inset Formula $O\left(xy+xy\right)=O\left(xy\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נראה כי אנו מבצעים את הלולאה 
+\begin_inset Formula $m$
+\end_inset
+
+ פעמים )בכל איטרציה כמות הביטים של 
+\begin_inset Formula $b$
+\end_inset
+
+ קטנה ב-
+\begin_inset Formula $1$
+\end_inset
+
+(, ובכל פעם מבצעים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+פעולות כפל מסיבוכיות שאינה זניחה.
+ הכפלה של 
+\begin_inset Formula $a*a$
+\end_inset
+
+ היא בסיבוכיות של 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ בפעם הראשונה, וכל פעם מגדילה את מספר הביטים ב
+\begin_inset Formula $a$
+\end_inset
+
+ פי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+.
+ כך שבהרצה ה
+\begin_inset Formula $k$
+\end_inset
+
+, כמות הביטים של 
+\begin_inset Formula $a$
+\end_inset
+
+ תהיה 
+\begin_inset Formula $2^{k}n$
+\end_inset
+
+ ביטים ולכן הסיבוכיות הכפל תהיה 
+\begin_inset Formula $\left(2^{k}n\right)^{2}=4^{k}n^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נראה כי ה
+\lang english
+result
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+כל פעם גדל במספר הביטים של 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ כלומר, אם בהרצה ה
+\begin_inset Formula $k$
+\end_inset
+
+ מספר הביטים ב
+\lang english
+result
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הוא 
+\begin_inset Formula $b$
+\end_inset
+
+, לאחר מכן גודל ה
+\lang english
+result
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+יהיה 
+\begin_inset Formula $b+2^{k}n$
+\end_inset
+
+.
+ כיוון שה
+\lang english
+result
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מתחיל מ
+\begin_inset Formula $1$
+\end_inset
+
+, נראה כי בהרצה ה
+\begin_inset Formula $k$
+\end_inset
+
+, גודל ה
+\lang english
+result
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+יהיה 
+\begin_inset Formula $\sum_{i=0}^{k-1}2^{i}n=n\frac{2^{k}-1}{1}=\left(2^{k}-1\right)n$
+\end_inset
+
+.
+ ולכן הסיבוכיות של הכפלת 
+\begin_inset Formula $a*result$
+\end_inset
+
+ תהיה 
+\begin_inset Formula $\left(2^{k}-1\right)2^{k}n^{2}=4^{k}n^{2}-2^{k}n^{2}$
+\end_inset
+
+.
+ כעת, נוכל לחשב את הסיבוכיות הכוללת:
+\begin_inset Formula 
+\[
+\sum_{i=0}^{m}4^{k}n^{2}+4^{k}n^{2}-2^{k}n^{2}=n^{2}\left(\sum_{i=0}^{m}4^{k}+\sum_{i=0}^{m}4^{k}-\sum_{i=0}^{m}2^{k}\right)=n^{2}\left(2\cdot\frac{4^{m+1}-1}{3}-2^{m+1}+1\right)=O\left(4^{m}n^{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\numeric off
+:
+\end_layout
+
+\begin_layout Subsection*
+ב.
+\end_layout
+
+\begin_layout Standard
+לולאת ה-
+\lang english
+for
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+החיצונית עוברת על 
+\begin_inset Formula $n$
+\end_inset
+
+ המחרוזות במערך ובכל איטרציה, לולאת ה-
+\lang english
+for
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הפנימית עוברת גם היא על 
+\begin_inset Formula $n$
+\end_inset
+
+ המחרוזות.
+ בכל איטרציה של הלולאה הפנימית )חוץ מאחת שבה שתי המחרוזות זהות( והלולאה
+ מבצעת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+slice
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+באורך 
+\begin_inset Formula $k$
+\end_inset
+
+ לכל אחת מהמחרוזות בסיבוכיות 
+\begin_inset Formula $O\left(2k\right)=O\left(k\right)$
+\end_inset
+
+ ולאחר מכן משווה בין שתי המחרוזות בסיבוכיות 
+\begin_inset Formula $O\left(k\right)$
+\end_inset
+
+ ואם הן מתאימות היא מוסיפה אותן לרשימה בסיבוכיות 
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+.
+ לכן, סיבוכיות זמן הריצה של הפונקציה במקרה הגרוע ביותר היא 
+\begin_inset Formula $O\left(n\cdot\left(n-1\right)\cdot\left(k+k\right)\right)=O\left(n^{2}k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+המקרה הגרוע ביותר מתקבל כאשר הרישא של כל המחרוזות זהה לסיפא של כולן )עד
+ כדי תו אחרון(, במקרה זה הפונקציה תשווה בין כל 
+\begin_inset Formula $k$
+\end_inset
+
+ התווים של כל זוג מחרוזות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)לפני שתוסיף אותן לרשימה או שיתגלה שהן לא זהות(.
+\end_layout
+
 \end_body
 \end_document
