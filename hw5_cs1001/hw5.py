@@ -11,7 +11,7 @@
 
 # For example: SUBMISSION_IDS = ["123456", "987654"] if submitted in a pair or SUBMISSION_IDS = ["123456"] if submitted alone.
 
-SUBMISSION_IDS = []
+SUBMISSION_IDS = ["209729524", "211964515"]
 
 
 ############
@@ -152,16 +152,24 @@ class Binary_search_tree():
             insert_rec(self.root, key, val)
 
     def diam(self):
-        '''
-        fill-in your code below here according to the instructions
-        '''
-        pass
+        def diam_node(node):
+            if node is None:
+                return 0, 0
+            l_depth, l_diam = diam_node(node.left)
+            r_depth, r_diam = diam_node(node.right)
+            return 1 + max(r_depth, l_depth), max(1 + r_depth + l_depth, l_diam, r_diam)
+        return diam_node(self.root)[1]
 
     def is_min_heap(self):
-        '''
-        fill-in your code below here according to the instructions
-        '''
-        pass
+        def is_min_heap_node(node):
+            if node is None:
+                return True
+            if node.left is not None and node.left.val < node.val:
+                return False
+            if node.right is not None and node.right.val < node.val:
+                return False
+            return is_min_heap_node(node.left) and is_min_heap_node(node.right)
+        return is_min_heap_node(self.root)
 
 
 ############
@@ -202,16 +210,29 @@ class PQueue():
         return "[" + out[:-2] + "]"
 
     def pull(self):
-        '''
-        fill-in your code below here according to the instructions
-        '''
-        pass
+        retVal = self.next
+        if retVal is None:
+            return None, None
+        self.len -= 1
+        self.next = self.next.next
+        return retVal.value, retVal.priority
 
     def insert(self, val, p):
-        '''
-        fill-in your code below here according to the instructions
-        '''
-        pass
+        curr = self.next
+        self.len += 1
+        if curr is None:
+            self.next = PNode(val, p)
+            return
+        if curr.priority < p:
+            self.next = PNode(val, p)
+            self.next.next = curr
+            return
+        while curr.next is not None and curr.next.priority >= p:
+            curr = curr.next
+        new_node = PNode(val, p)
+        new_node.next = curr.next
+        curr.next = new_node
+
 
 
 #  Part B
@@ -255,10 +276,34 @@ class Linked_list():
         self.len += 1
 
     def reverse_start_end(self, k):
-        '''
-        fill-in your code below here according to the instructions
-        '''
         assert 0 <= k <= self.len / 2
+        first_node = self.next
+        next_node = first_node.next
+        curr = first_node
+        prev = None
+        for i in range(k):
+            curr.next = prev
+            prev = curr
+            curr = next_node
+            next_node = next_node.next
+        first_node.next = curr
+        self.next = prev
+        for i in range(self.len - 2*k):
+            prev = curr
+            curr = next_node
+            next_node = next_node.next
+        first_node = prev
+        prev = None
+        for i in range(k-1):
+            curr.next = prev
+            prev = curr
+            curr = next_node
+            next_node = next_node.next
+        curr.next = prev
+        first_node.next = curr
+
+
+
 
 
 ############
@@ -278,12 +323,12 @@ def power_new(a, b):
     reverse_b_bin = b_bin[::-1]
 
     for bit in reverse_b_bin:
-
-    _____________________________________
-
-    _____________________________________
-
-    _____________________________________
+        pass
+#    _____________________________________
+#
+#    _____________________________________
+#
+#   _____________________________________
 
     return result
 
@@ -302,17 +347,17 @@ def power_with_base(a, b, base=2):
 
         x = 1
 
-        residual = __________________________
+#        residual = __________________________
 
-        for i in range(residual):
-            x *= a
+#        for i in range(residual):
+#            x *= a
 
-        _____________________________________
+#        _____________________________________
 
-        for i in range(__________________):
-            x *= a
+#        for i in range(__________________):
+#            x *= a
 
-        _____________________________________
+#        _____________________________________
 
         b = b // base
 
@@ -436,7 +481,6 @@ def test():
         q_str += [p.value]
         p = p.next
     q_str = "".join(q_str)
-
     if q_str != "baced":
         print("error in reverse_start_end")
 
@@ -463,3 +507,4 @@ def test():
             prefix_suffix_overlap_hash2(lst, k) != [(1, 2), (0, 1)]:
         print("error in prefix_suffix_overlap_hash2")
 
+test()
