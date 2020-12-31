@@ -1158,5 +1158,515 @@ slice
 )לפני שתוסיף אותן לרשימה או שיתגלה שהן לא זהות(.
 \end_layout
 
+\begin_layout Subsection*
+ה.
+\end_layout
+
+\begin_layout Standard
+יצירת ה-
+\lang english
+Dict
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נעשית בסיבוכיות זמן 
+\begin_inset Formula $O\left(n\right)$
+\end_inset
+
+.
+ לאחר מכן הלולאה הראשונה עוברת על כל איברי הרשימה, לכל אחד מהם היא יוצרת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+substring
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+של המחרוזת בסיבוכיות 
+\begin_inset Formula $O\left(k\right)$
+\end_inset
+
+, ועבור פעולת ה-
+\lang english
+insert
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הפונקצה מחשבת את ה-
+\lang english
+hash
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בסיבוכיות 
+\begin_inset Formula $O\left(k\right)$
+\end_inset
+
+.
+ כלומר, הלולאה הראשונה רצה בסיבוכית 
+\begin_inset Formula $O\left(nk\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+לאחר מכן, הלולאה השנייה עוברת על כל איברי הרשימה, לכל אחד מהם היא יוצרת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+substring
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+של המחרוזת בסיבוכיות 
+\begin_inset Formula $O\left(k\right)$
+\end_inset
+
+.
+ פעולת ה-
+\lang english
+hash
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מתבצעת בסיבוכיות 
+\begin_inset Formula $O\left(k\right)$
+\end_inset
+
+ ובממוצע יהיו 
+\begin_inset Formula $\frac{\ln\left(n\right)}{\ln\ln\left(n\right)}$
+\end_inset
+
+ התנגשויות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+hash
+\lang hebrew
+ שפונקציית
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+find
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תחפש בהן את ה-
+\lang english
+key
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+המתאים.
+ השוואת ה-
+\lang english
+keys
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תיעשה בסיבוכיות 
+\begin_inset Formula $O\left(k\right)$
+\end_inset
+
+ במקרה הגרוע ביותר עבור כל מחרוזת ב-
+\lang english
+Dict
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ותחיר לבסוף רשימה ריקה.
+ לכן, פונקציית
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+find
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תרוץ בסיבוכיות 
+\begin_inset Formula $O\left(k+\frac{\ln\left(n\right)}{\ln\ln\left(n\right)}\cdot k\right)=O\left(\frac{\ln\left(n\right)}{\ln\ln\left(n\right)}\cdot k\right)$
+\end_inset
+
+.
+ מכאן נובע כי הלולאה השנייה רצה בסיבוכיות 
+\begin_inset Formula $O\left(n\frac{\ln\left(n\right)}{\ln\ln\left(n\right)}\cdot k\right)$
+\end_inset
+
+ ולכן סיבוכיות הזמן הכוללת של הפונקציה היא 
+\begin_inset Formula $O\left(n\frac{\ln\left(n\right)}{\ln\ln\left(n\right)}\cdot k+n+nk\right)=O\left(n\frac{\ln\left(n\right)}{\ln\ln\left(n\right)}\cdot k\right)$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document

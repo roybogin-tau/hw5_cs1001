@@ -409,13 +409,29 @@ class Dict:
 
 # d
 def prefix_suffix_overlap_hash1(lst, k):
-    pass  # replace this with your code
+    my_dict = Dict(len(lst), hash)
+    tuples = []
+    for idx, s in enumerate(lst):
+        my_dict.insert(s[:k], idx)
+    for idx, s in enumerate(lst):
+        tuples += [(j, idx) for j in my_dict.find(s[-k:]) if j != idx]
+    return tuples
+
 
 
 # f
 def prefix_suffix_overlap_hash2(lst, k):
-    pass  # replace this with your code
-
+    my_dict = dict()
+    tuples = []
+    for idx, s in enumerate(lst):
+        r = s[:k]
+        if r in my_dict:
+            my_dict[r].append(idx)
+        else:
+            my_dict[r] = [idx]
+    for idx, s in enumerate(lst):
+        tuples += [(j, idx) for j in my_dict.get(s[-k:], []) if j != idx]
+    return tuples
 
 ########
 # Tester
