@@ -1668,5 +1668,430 @@ find
 .
 \end_layout
 
+\begin_layout Subsection*
+ז.
+\end_layout
+
+\begin_layout Standard
+לאחר הרצה של הקוד עבור רשימה של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $1000$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+, 
+\begin_inset Formula $2000$
+\end_inset
+
+ ו
+\begin_inset Formula $4000$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מחרוזות באורך של 
+\begin_inset Formula $1000$
+\end_inset
+
+ תווים, ומדידת ממוצע של 
+\begin_inset Formula $100$
+\end_inset
+
+ הרצות עבור כל אחת משלושת הפונקציות, והגענו למסקנות הבאות:
+\end_layout
+
+\begin_layout Standard
+ההרצה של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+prefix_suffix_overlap
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לקחה זמן הכי ארוך באופן משמעותי, פי 
+\begin_inset Formula $50$
+\end_inset
+
+ מההרצה של 
+\begin_inset Formula $hash1$
+\end_inset
+
+ ופי 
+\begin_inset Formula $100$
+\end_inset
+
+ מההרצה של 
+\begin_inset Formula $hash2$
+\end_inset
+
+, עבור הרצה על 
+\begin_inset Formula $1000$
+\end_inset
+
+ מחרוזות, ומשמעותית יותר מזאת עבור מספר גדול יותר של מחרוזות.
+ פונקציה זו לא כללה שום ממואיזציה, והסיבוכיות שלה היא הגדולה ביותר מבין
+ השלושה, כך שתוצאה זו אינה מפתיעה.
+\end_layout
+
+\begin_layout Standard
+ההרצה של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+prefix_suffix_overlap_hash1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היתה מהירה בהרבה מהזמן שלקח לקודמת, שינוי זה נובע מהשימוש במבנה נתונים 
+\begin_inset Formula $Dict$
+\end_inset
+
+ אשר חוסך את השוואת הרישא של כל אחת מהמחרוזות עבור כל מעבר על סיפא, בעזרת
+ שמירת כל הרישות ב
+\begin_inset Formula $Dict$
+\end_inset
+
+ קודם לכן, היה ניתן לראות שיפור משמעותי בזמני הריצה כתוצאה מיעול זה.
+\end_layout
+
+\begin_layout Standard
+ההרצה של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+prefix_suffix_overlap_hash2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הייתה המהירה מבין השלושה, היא השתמשה בטכניקה זהה לפונקציה הקודמת, אך בעזרת
+ מבנה הנתונים המובנה של פייתון 
+\begin_inset Formula $dict$
+\end_inset
+
+, נראה כי פונקציה זו רצה מהר יותר פי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ביחס לפונקציה 
+\begin_inset Formula $hash1$
+\end_inset
+
+ עבור הרצה של 
+\begin_inset Formula $1000$
+\end_inset
+
+ מחרוזות, ועבור הרצה של 
+\begin_inset Formula $4000$
+\end_inset
+
+ מחרוזות, פונקציה זו רצה בממוצע פי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מהר יותר מ
+\begin_inset Formula $hash1$
+\end_inset
+
+, גדילה אשר מעידה על סיבוכיות טובה יותר, הנובעת ככל הנראה כתוצאה מההבדלים
+ במימוש הפנימי של 
+\begin_inset Formula $dict$
+\end_inset
+
+ של פייתון לעומת 
+\begin_inset Formula $Dict$
+\end_inset
+
+ הנכתב בתרגיל.
+\end_layout
+
 \end_body
 \end_document

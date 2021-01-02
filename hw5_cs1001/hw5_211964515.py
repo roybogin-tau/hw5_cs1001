@@ -11,7 +11,7 @@
 
 # For example: SUBMISSION_IDS = ["123456", "987654"] if submitted in a pair or SUBMISSION_IDS = ["123456"] if submitted alone.
 
-SUBMISSION_IDS = ["209729524", "211964515"]
+SUBMISSION_IDS = ["211964515", "209729524"]
 
 
 ############
@@ -526,5 +526,3 @@ def test():
     if prefix_suffix_overlap_hash2(lst, k) != [(0, 1), (1, 2)] and \
             prefix_suffix_overlap_hash2(lst, k) != [(1, 2), (0, 1)]:
         print("error in prefix_suffix_overlap_hash2")
-
-test()
