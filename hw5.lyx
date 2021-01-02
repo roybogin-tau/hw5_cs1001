@@ -139,36 +139,7 @@ End
 \end_layout
 
 \begin_layout Author
-רועי בוגין -
-\family roman
-\series medium
-\shape up
-\size large
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-209729524
-\numeric off
-, בר צדוק -
+בר צדוק -
 \family roman
 \series medium
 \shape up
@@ -196,6 +167,35 @@ End
 \noun default
 \color inherit
 211964515
+\numeric off
+, רועי בוגין -
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+209729524
 \end_layout
 
 \begin_layout Section*
@@ -1384,6 +1384,35 @@ substring
 \begin_inset Formula $O\left(k\right)$
 \end_inset
 
+ ומריצה את הפונקצייה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+find
+\lang hebrew
 .
  פעולת ה-
 \lang english
@@ -1568,7 +1597,7 @@ keys
 \begin_inset Formula $O\left(k\right)$
 \end_inset
 
- במקרה הגרוע ביותר עבור כל מחרוזת ב-
+ עבור כל מחרוזת ב-
 \lang english
 Dict
 \family roman
@@ -1597,7 +1626,61 @@ Dict
 \uwave default
 \noun default
 \color inherit
-ותחיר לבסוף רשימה ריקה.
+עם אותו ערך
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+hash
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ותחזיר לבסוף רשימה ריקה.
  לכן, פונקציית
 \family roman
 \series medium
@@ -1658,11 +1741,11 @@ find
 
 .
  מכאן נובע כי הלולאה השנייה רצה בסיבוכיות 
-\begin_inset Formula $O\left(n\frac{\ln\left(n\right)}{\ln\ln\left(n\right)}\cdot k\right)$
+\begin_inset Formula $O\left(n\left(k+k\frac{\ln\left(n\right)}{\ln\ln\left(n\right)}\right)\right)=O\left(nk\frac{\ln\left(n\right)}{\ln\ln\left(n\right)}\right)$
 \end_inset
 
  ולכן סיבוכיות הזמן הכוללת של הפונקציה היא 
-\begin_inset Formula $O\left(n\frac{\ln\left(n\right)}{\ln\ln\left(n\right)}\cdot k+n+nk\right)=O\left(n\frac{\ln\left(n\right)}{\ln\ln\left(n\right)}\cdot k\right)$
+\begin_inset Formula $O\left(n+nk+nk\frac{\ln\left(n\right)}{\ln\ln\left(n\right)}\right)=O\left(nk\frac{\ln\left(n\right)}{\ln\ln\left(n\right)}\right)$
 \end_inset
 
 .
